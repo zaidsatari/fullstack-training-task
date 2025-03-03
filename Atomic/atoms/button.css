@@ -1,0 +1,18 @@
+.btn {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    opacity : 1;
+}
+.btn:hover {
+    opacity : 0.9;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}

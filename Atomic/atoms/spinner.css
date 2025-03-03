@@ -1,0 +1,13 @@
+#loading-spinner{
+    animation: spin 1s linear infinite;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border-Top: 5px solid #28a745;
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    z-index: 1000;
+}
