@@ -66,7 +66,7 @@ class Button {
         this.button = createElement('button', {
             textContent: text,
             style: `
-                background-color: ${type === "primary" ? "#007bff" : "#28a745"};
+                background-color: ${type === "primary" ? 'var(--color-primary)' : "#28a745"};
                 border-radius: 8px;
                 border: none;
                 box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
