@@ -1,5 +1,5 @@
 console.log(' Profile Page')
-import { createElement } from '../../../utils/index.js';
+import { createElement } from '../../../utils';
 
 export class ProfilePage {
   init(container) {

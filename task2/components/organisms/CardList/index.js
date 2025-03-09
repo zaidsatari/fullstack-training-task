@@ -1,7 +1,7 @@
-import { Card } from '../../molecules/Card/index.js';
-import { cardStorage, createElement } from '../../../utils/index.js';
-import { API_URL, DEFAULT_CARD_FETCH_SIZE } from '../../../constants/index.js';
-import { LoadingSpinner } from '../../atoms/LoadingSpinner/index.js';
+import { Card } from '../../molecules/Card';
+import { cardStorage, createElement } from '../../../utils';
+import { API_URL, DEFAULT_CARD_FETCH_SIZE } from '../../../constants';
+import { LoadingSpinner } from '../../atoms/LoadingSpinner';
 
 export class CardList {
     constructor(counter) {

@@ -1,7 +1,8 @@
-import { cardStorage, createElement, createGridOptions,openCardForm } from '../../../utils/index.js';
-import { API_URL, DEFAULT_CARD_FETCH_SIZE } from '../../../constants/index.js';
-import { LoadingSpinner } from '../../atoms/LoadingSpinner/index.js';
+import { cardStorage, createElement, createGridOptions } from '../../../utils';
+import { API_URL, DEFAULT_CARD_FETCH_SIZE } from '../../../constants';
+import { LoadingSpinner } from '../../atoms/LoadingSpinner';
 import { Card } from "../../molecules/Card";
+import { CardModal } from "../../organisms/CardModal";
 
 export class GridView {
     constructor() {
@@ -57,12 +58,10 @@ export class GridView {
         this.renderCards();
     }
 
-    addCard(cardData) {
-        const randomId = Math.floor(Math.random() * (10000000 - 1000000 + 1)) + 1000000;
-
-        openCardForm(null, (updatedCard) => {
+    addCard() {
+        const modal = new CardModal(null, (updatedCard) => {
             const newCard = new Card({
-                cardID: randomId,
+                id: Date.now().toString(), // Ensure unique ID
                 name: updatedCard.name,
                 power: updatedCard.power,
                 rarity: updatedCard.rarity,
@@ -72,18 +71,18 @@ export class GridView {
             this.cards.push(newCard);
             this.renderCards();
         });
+
+        modal.open();
     }
 
-
     editCard(cardData) {
-        openCardForm(cardData, (updatedCard) => {
+        const modal = new CardModal(cardData, (updatedCard) => {
             this.cards = this.cards.map(card =>
                 card.id === updatedCard.id ? { ...card, ...updatedCard } : card
             );
             this.renderCards();
         });
+
+        modal.open();
     }
 }
-
-
-

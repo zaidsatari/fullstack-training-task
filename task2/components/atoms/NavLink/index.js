@@ -1,4 +1,4 @@
-import { createElement } from '../../../utils/index.js';
+import { createElement } from '../../../utils';
 
 export class NavLink {
   constructor(text, href) {

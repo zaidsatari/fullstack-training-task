@@ -1,7 +1,7 @@
-import { createElement } from '../../../utils/index.js';
-import { NavLink } from '../../atoms/NavLink/index.js';
-import { BurgerIcon } from '../../atoms/BurgerIcon/index.js';
-import { APP_PAGES } from '../../../constants/index.js';
+import { createElement } from '../../../utils';
+import { NavLink } from '../../atoms/NavLink';
+import { BurgerIcon } from '../../atoms/BurgerIcon';
+import { APP_PAGES } from '../../../constants';
 
 export class Nav {
   constructor() {

@@ -1,5 +1,5 @@
-import { BURGER_ICON_LINES } from '../../../constants/index.js';
-import { createElement } from '../../../utils/index.js';
+import { BURGER_ICON_LINES } from '../../../constants';
+import { createElement } from '../../../utils';
 
 export class BurgerIcon {
   constructor(onClick) {

@@ -1,5 +1,5 @@
-import { createElement } from '../../../utils/index.js';
-import { API_URL } from '../../../constants/index.js';
+import { createElement } from '../../../utils';
+import { API_URL } from '../../../constants';
 
 export class KanbanView {
     constructor() {

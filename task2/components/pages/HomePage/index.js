@@ -1,10 +1,10 @@
-import { CardList } from '../../organisms/CardList/index.js';
-import { GridView } from '../../organisms/GridView/index.js';
-import { KanbanView } from '../../organisms/KanbanBoard/index.js';
-import { CalendarView } from '../../organisms/CalenderView/index.js';
-import { Button } from '../../atoms/Button/index.js';
-import { INITIAL_COUNTER, CARD_TEXT } from '../../../constants/index.js';
-import { Counter, cardStorage, createElement } from '../../../utils/index.js';
+import { CardList } from '../../organisms/CardList';
+import { GridView } from '../../organisms/GridView';
+import { KanbanView } from '../../organisms/KanbanBoard';
+import { CalendarView } from '../../organisms/CalenderView';
+import { Button } from '../../atoms/Button';
+import { INITIAL_COUNTER, CARD_TEXT } from '../../../constants';
+import { Counter, cardStorage, createElement } from '../../../utils';
 
 export class HomePage {
     constructor() {

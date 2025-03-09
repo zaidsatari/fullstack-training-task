@@ -1,6 +1,6 @@
-import { Button } from '../../atoms/Button/index.js';
-import { cardStorage, createElement } from '../../../utils/index.js';
-import { CARD_TEXT, FALLBACK_IMAGE } from '../../../constants/index.js';
+import { Button } from '../../atoms/Button';
+import { cardStorage, createElement } from '../../../utils';
+import { CARD_TEXT, FALLBACK_IMAGE } from '../../../constants';
 
 export class Card {
     constructor(data, counter) {
