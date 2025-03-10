@@ -1,0 +1,26 @@
+.burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    justify-content: space-between;
+    padding: 4px;
+    width: 30px;
+    z-index: 1001;
+  }
+
+  .burger div {
+    background-color: var(--color-white);
+    border-radius: 2px;
+    height: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 100%;
+  }
+
+
+  @media (min-width: 768px) {
+    .burger {
+      display: none;
+    }
+
+  }

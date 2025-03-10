@@ -1,0 +1,84 @@
+.kanban-view {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.kanban-column {
+    align-items: center;
+    background: var(--color-white);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-card);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 300px;
+    min-height: 300px;
+    transition: background-color 0.3s;
+}
+
+.kanban-column h3 {
+    border-bottom: 2px solid var(--color-white);
+    border-radius: 8px 8px 0 0;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.kanban-column h3[data-status="To Do"] {
+    background-color: var(--color-primary);
+}
+
+.kanban-column h3[data-status="In Progress"] {
+    background-color: var(--color-orange);
+}
+
+.kanban-column h3[data-status="Done"] {
+    background-color: var(--color-dark-green);
+}
+
+.kanban-column:hover {
+    background: var(--color-white-green);
+}
+
+.kanban-card {
+    background-color: var(--color-primary);
+    border-radius: 6px;
+    color: var(--color-white);
+    cursor: grab;
+    margin: 10px;
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    width: 90%;
+}
+
+.kanban-card.dragging {
+    background-color: var(--color-primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.kanban-card:hover {
+    background: var(--color-light-red);
+}
+
+.kanban-card:active {
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+    .kanban-view {
+        display: flex;
+        gap: 32px;
+        justify-content: center;
+        padding: 20px;
+        width: 100%;
+    }
+}
