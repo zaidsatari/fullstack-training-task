@@ -6,7 +6,7 @@ import { CardModal } from "../../organisms/CardModal";
 
 export class GridView {
     constructor() {
-        this.cards = []; // All available cards
+        this.cards = [];
         this.spinner = new LoadingSpinner();
         this._cardsWrapper = createElement('div', { id: 'agGrid-container', className: 'ag-container' });
         this._cardsWrapper.style.height = '600px';
@@ -61,7 +61,7 @@ export class GridView {
     addCard() {
         const modal = new CardModal(null, (updatedCard) => {
             const newCard = new Card({
-                id: Date.now().toString(), // Ensure unique ID
+                id: Date.now().toString(),
                 name: updatedCard.name,
                 power: updatedCard.power,
                 rarity: updatedCard.rarity,

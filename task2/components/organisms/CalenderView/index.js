@@ -3,7 +3,7 @@ import { CalendarDay } from '../../molecules/CalenderDay';
 
 export class CalendarView {
     constructor() {
-        this.cards = []; // Store cards (events)
+        this.cards = [];
         this._calendarWrapper = createElement('div', {id: 'calendar-container', className: 'calendar-container'});
 
         this.currentDate = new Date();
