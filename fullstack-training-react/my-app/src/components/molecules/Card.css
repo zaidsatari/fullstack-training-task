@@ -1,0 +1,62 @@
+:root {
+    --card-background: #FFFFFF;
+    --card-text-color: #000000;
+    --card-border-color: #000000;
+    --header-background: #333333;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--card-border-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card.selected {
+    background-color: var(--header-background);
+    color: white;
+    border: 2px solid var(--color-primary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: var(--card-text-color);
+}
+
+.card-description {
+    font-size: 14px;
+    color: var(--card-text-color);
+    line-height: 1.5;
+}
+
+.card-details {
+    display: none;
+    padding: 10px;
+    color: var(--card-text-color);
+    font-size: 14px;
+}
+
+.card-details.show {
+    display: block;
+    margin-top: 10px;
+}
